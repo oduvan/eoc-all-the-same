@@ -1,0 +1,47 @@
+<!-- Describe task in general -->
+
+<p>
+    В этой миссии Вам надо определить, все ли элементы массива равны.
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Входные: </strong> {% if interpreter.slug == "js-node" %}Array{% else %}List{% endif %}.
+</p>
+
+<p>
+    <strong>Выходные: </strong> Bool. 
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Примеры:</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+allTheSame([1, 1, 1]) == true
+allTheSame([1, 2, 1]) == false
+allTheSame(['a', 'a', 'a']) == true
+allTheSame([]) == true
+</pre>
+{% else %}
+<pre class="brush: python">
+all_the_same([1, 1, 1]) == True
+all_the_same([1, 2, 1]) == False
+all_the_same(['a', 'a', 'a']) == True
+all_the_same([]) == True
+</pre>
+{% endif %}
+</div>
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+{% if interpreter.slug == "js-node" %}{% else %}
+
+<p>
+    <strong>Precondition:</strong>
+    <i>all elements of the input list are hashable</i>
+</p>
+{% endif %}

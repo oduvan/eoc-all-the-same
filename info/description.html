@@ -1,0 +1,49 @@
+<!-- Describe task in general -->
+
+<p>
+    In this mission you should check if all elements in the given {% if interpreter.slug == "js-node" %}Array{% else %}list{% endif %} are equal.
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Input: </strong> {% if interpreter.slug == "js-node" %}Array{% else %}List{% endif %}.
+</p>
+
+<p>
+    <strong>Output: </strong> Bool. 
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+allTheSame([1, 1, 1]) == true
+allTheSame([1, 2, 1]) == false
+allTheSame(['a', 'a', 'a']) == true
+allTheSame([]) == true
+</pre>
+{% else %}
+<pre class="brush: python">
+all_the_same([1, 1, 1]) == True
+all_the_same([1, 2, 1]) == False
+all_the_same(['a', 'a', 'a']) == True
+all_the_same([]) == True
+</pre>
+{% endif %}
+</div>
+<p><i>The idea for this mission was found on <a href="https://dbader.org/">Python Tricks series by Dan Bader</a></i></p>
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+
+{% if interpreter.slug == "js-node" %}{% else %}
+
+<p>
+    <strong>Precondition:</strong>
+    <i>all elements of the input list are hashable</i>
+</p>
+{% endif %}
